@@ -3,6 +3,8 @@
 $_['site_url']          = HTTP_SERVER;
 $_['site_ssl']          = HTTPS_SERVER;
 
+echo "Aqui adan ".$(username);
+
 // Database
 $_['db_autostart']      = true;
 $_['db_engine']         = DB_DRIVER; // mpdo, mssql, mysql, mysqli or postgre

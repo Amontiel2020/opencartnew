@@ -3,7 +3,7 @@
 $_['site_url']          = HTTP_SERVER;
 $_['site_ssl']          = HTTPS_SERVER;
 
-echo "Aqui adan ".$(username);
+//echo "Aqui adan ".$(username);
 
 // Database
 $_['db_autostart']      = true;

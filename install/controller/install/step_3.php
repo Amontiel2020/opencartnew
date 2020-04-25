@@ -75,9 +75,15 @@ class ControllerInstallStep3 extends Controller {
 			$output .= '// DB' . "\n";
 			$output .= 'define(\'DB_DRIVER\', \'' . addslashes($this->request->post['db_driver']) . '\');' . "\n";
 			$output .= 'define(\'DB_HOSTNAME\', \'' . addslashes($this->request->post['db_hostname']) . '\');' . "\n";
-			$output .= 'define(\'DB_USERNAME\', \'' . addslashes($this->request->post['db_username']) . '\');' . "\n";
-			$output .= 'define(\'DB_PASSWORD\', \'' . addslashes(html_entity_decode($this->request->post['db_password'], ENT_QUOTES, 'UTF-8')) . '\');' . "\n";
-			$output .= 'define(\'DB_DATABASE\', \'' . addslashes($this->request->post['db_database']) . '\');' . "\n";
+			//$output .= 'define(\'DB_USERNAME\', \'' . addslashes($this->request->post['db_username']) . '\');' . "\n";
+			$output .= 'define(\'DB_USERNAME\', \'' . addslashes('adan') . '\');' . "\n";
+
+			//$output .= 'define(\'DB_PASSWORD\', \'' . addslashes(html_entity_decode($this->request->post['db_password'],
+			$output .= 'define(\'DB_PASSWORD\', \'' . addslashes('adan') . '\');' . "\n";
+			 ENT_QUOTES, 'UTF-8')) . '\');' . "\n";
+			//$output .= 'define(\'DB_DATABASE\', \'' . addslashes($this->request->post['db_database']) . '\');' . "\n";
+			$output .= 'define(\'DB_DATABASE\', \'' . addslashes('maxitel') . '\');' . "\n";
+
 			$output .= 'define(\'DB_PORT\', \'' . addslashes($this->request->post['db_port']) . '\');' . "\n";
 			$output .= 'define(\'DB_PREFIX\', \'' . addslashes($this->request->post['db_prefix']) . '\');' . "\n\n";
 			

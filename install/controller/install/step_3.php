@@ -276,6 +276,7 @@ class ControllerInstallStep3 extends Controller {
 
 		if ($this->request->post['db_driver'] == 'mysqli') {
 			try {
+				echo "OK Adan se hacen los cambios ";
 				/*$db = new \DB\MySQLi($this->request->post['db_hostname'], $this->request->post['db_username'], html_entity_decode($this->request->post['db_password'], ENT_QUOTES, 'UTF-8'), $this->request->post['db_database'], $this->request->post['db_port']);*/
 
 				$db = new \DB\MySQLi($this->request->post['db_hostname'], 'adan', 'adan','maxitel', $this->request->post['db_port']);

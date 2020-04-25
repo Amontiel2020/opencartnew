@@ -74,9 +74,9 @@ function usage() {
 		//'--http_server', 'http://localhost/opencart/'
 
 	    '--db_hostname', 'localhost',
-		'--db_username', 'adan',
-		'--db_password', 'adan',
-		'--db_database', 'maxitel',
+		'--db_username', $(username),
+		'--db_password', $(password),
+		'--db_database', $(databasename),
 		'--db_driver', 'mysqli',
 		'--db_port', '3306',
 		'--username', 'admin',

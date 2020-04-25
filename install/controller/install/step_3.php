@@ -286,7 +286,7 @@ class ControllerInstallStep3 extends Controller {
 				}
 			} catch(Exception $e) {
 				echo "OK Adan se hacen los cambios ";
-				$this->error['warning'] = $mysql->connect_error;
+				//$this->error['warning'] = $mysql->connect_error;
 			}
 		} elseif ($this->request->post['db_driver'] == 'mpdo') {
 			try {

@@ -77,7 +77,6 @@ class ControllerInstallStep3 extends Controller {
 			$output .= 'define(\'DB_HOSTNAME\', \'' . addslashes($this->request->post['db_hostname']) . '\');' . "\n";
 			//$output .= 'define(\'DB_USERNAME\', \'' . addslashes($this->request->post['db_username']) . '\');' . "\n";
 			$output .= 'define(\'DB_USERNAME\', \'' . addslashes('adan') . '\');' . "\n";
-
 			//$output .= 'define(\'DB_PASSWORD\', \'' . addslashes(html_entity_decode($this->request->post['db_password'],
 			$output .= 'define(\'DB_PASSWORD\', \'' . addslashes('adan') . '\');' . "\n";
 			 ENT_QUOTES, 'UTF-8')) . '\');' . "\n";
@@ -277,7 +276,9 @@ class ControllerInstallStep3 extends Controller {
 
 		if ($this->request->post['db_driver'] == 'mysqli') {
 			try {
-				$db = new \DB\MySQLi($this->request->post['db_hostname'], $this->request->post['db_username'], html_entity_decode($this->request->post['db_password'], ENT_QUOTES, 'UTF-8'), $this->request->post['db_database'], $this->request->post['db_port']);
+				/*$db = new \DB\MySQLi($this->request->post['db_hostname'], $this->request->post['db_username'], html_entity_decode($this->request->post['db_password'], ENT_QUOTES, 'UTF-8'), $this->request->post['db_database'], $this->request->post['db_port']);*/
+
+				$db = new \DB\MySQLi($this->request->post['db_hostname'], 'adan', 'adan','maxitel', $this->request->post['db_port']);
 				
 				if (is_resource($db)) {
 					$db->close();

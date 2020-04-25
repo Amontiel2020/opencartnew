@@ -62,16 +62,30 @@ function usage() {
 	echo "======\n";
 	echo "\n";
 	$options = implode(" ", array(
-		'--db_hostname', 'localhost',
-		'--db_username', 'root',
-		'--db_password', 'pass',
-		'--db_database', 'opencart',
+		//'--db_hostname', 'localhost',
+		//'--db_username', 'root',
+		//'--db_password', 'pass',
+		//'--db_database', 'opencart',
+		//'--db_driver', 'mysqli',
+		//'--db_port', '3306',
+		//'--username', 'admin',
+		//'--password', 'admin',
+		//'--email', 'youremail@example.com',
+		//'--http_server', 'http://localhost/opencart/'
+
+	    '--db_hostname', 'localhost',
+		'--db_username', 'adan',
+		'--db_password', 'adan',
+		'--db_database', 'maxitel',
 		'--db_driver', 'mysqli',
 		'--db_port', '3306',
 		'--username', 'admin',
 		'--password', 'admin',
 		'--email', 'youremail@example.com',
 		'--http_server', 'http://localhost/opencart/'
+
+
+
 	));
 	echo 'php cli_install.php install ' . $options . "\n\n";
 }
@@ -80,7 +94,7 @@ function usage() {
 function get_options($argv) {
 	$defaults = array(
 		'db_hostname' => 'localhost',
-		'db_database' => 'opencart',
+		'db_database' => 'maxitel',
 		'db_prefix' => 'oc_',
 		'db_driver' => 'mysqli',
 		'db_port' => '3306',
